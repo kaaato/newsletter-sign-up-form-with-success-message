@@ -1,0 +1,176 @@
+@font-face {
+  font-family: "roboto";
+  src: url(./assets/fonts/Roboto-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url(./assets/fonts/Roboto-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+
+:root {
+  --color-dark: hsl(234, 29%, 20%);
+  --color-light: hsl(0, 0%, 100%);
+  --color-off-white: hsl(0, 0%,78%);
+  --color-error: hsl(4, 100%, 67%);
+  --color-error-light: hsl(4 100% 67% / 0.3);
+  --bg-dark-800: hsl(234, 29%, 20%);
+  --bg-dark-700: hsl(235, 18%, 26%);
+  --bg-light: hsl(0, 0%, 100%);
+  --bg-gradient: linear-gradient(90deg, hsl(340, 100%, 65%), hsl(24, 100%, 65%));
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+}
+
+img,
+picture,
+svg {
+  block-size: auto;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.page {
+  font-family: "roboto";
+  font-size: 1rem;
+  background-color: var(--bg-light);
+  color: var(--color-dark);
+  display: grid;
+  place-content: center;
+}
+
+.inner {
+  max-width: 23.4375rem;
+  padding-inline: 1.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-top: 2.5rem;
+}
+
+.lead {
+  margin-top: 1.5rem;
+}
+
+.sentTo {
+  font-weight: 700;
+}
+
+.box-link {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  font-weight: 700;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 2.5rem;
+}
+
+.link {
+  display: block;
+  padding: 1rem;
+  text-align: center;
+}
+
+.link:hover {
+  background: var(--bg-gradient);
+}
+
+.link:focus-visible {
+  text-decoration: underline;
+}
+
+@media (min-width: 50rem) {
+  .page {
+    background-color: var(--bg-dark-700);
+  }
+
+  .inner {
+    max-width: 31.5625rem;
+    background-color: var(--bg-light);
+    border-radius: 20px;
+    padding: 3rem 4rem;
+  }
+
+  .title {
+    font-size: 3.5rem;
+  }
+
+  .box-link {
+    margin-bottom: 1rem;
+  }
+}
